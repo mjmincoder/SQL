@@ -1,0 +1,27 @@
+CREATE TABLE clothes_store (id INTEGER primary key, item TEXT, color TEXT, size TEXT, make TEXT, price INTEGER);
+INSERT INTO clothes_store VALUES (1, "sneaker", "black", "medium", "nike", 60);
+INSERT INTO clothes_store VALUES (2, "sandal", "red", "large", "levi", 30);
+INSERT INTO clothes_store VALUES (3, "flats", "orange", "small", "adidas", 30);
+INSERT INTO clothes_store VAlUES (4, "jeans", "blue", "small", "levi", 60);
+INSERT INTO clothes_store VALUES (5, "crop top", "white", "small", "nike", 10);
+INSERT INTO clothes_store VALUES (6, "heels", "pink", "large", "adidas", 20);
+INSERT INTO clothes_store VALUES (7, "scarf", "purple", "medium", "nike",5);
+INSERT INTO clothes_store VALUES (8, "gloves", "gold", "large", "levi", 5);
+INSERT INTO clothes_store VALUES (9, "shorts", "blue", "xlarge", "levi", 15);
+INSERT INTO clothes_store VALUES (10, "sweater", "grey", "xsmall", "nike", 15);
+INSERT INTO clothes_store VALUES (11, "socks", "white", "medium", "adidas", 10);
+INSERT INTO clothes_store VALUES (12, "shirts", "red", "large", "levi", 15);
+INSERT INTO clothes_store VALUES (13, "skirts", "pink", "small", "nike", 15);
+INSERT INTO clothes_store VALUES (14, "hats", "orange","medium", "adidas", 10);
+INSERT INTO clothes_store VALUES (15, "platforms", "black", "small", "nike", 60);
+
+
+-- display the data base ordered by price
+SELECT * FROM clothes_store ORDER BY price;
+
+SELECT *FROM clothes_store WHERE size is "small";
+
+-- display the amount of items whose size is small
+SELECT COUNT("items") From clothes_store where size is "small";
+
+
