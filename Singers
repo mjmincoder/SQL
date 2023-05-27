@@ -1,0 +1,32 @@
+CREATE TABLE singers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, gender TEXT, hometown TEXT, height REAL);
+INSERT INTO singers VALUES (1, "Jung Hoseok", 29, "male", "gwangju", 177);
+INSERT INTO singers VALUES (2, "Kim Namjoon", 28, "male", "ilsan", 180);
+INSERT INTO singers VALUES (3, "Kim Seokjin", 30, "male", "gwacheon", 179);
+INSERT INTO singers VALUES (4, "Min Yoongi", 30, "male", "daegu", 179);
+INSERT INTO singers VALUES (5, "Park Jimin", 27, "male", "busan", 175);
+INSERT INTO singers VALUES (6, "Kim Taehyung", 27, "male", "daegu", 179);
+INSERT INTO singers VALUES (7, "Jeon Jungkook", 25, "male", "busan", 179);
+INSERT INTO singers VALUES (8, "The Weeknd", 33, "male", "toronto", 169);
+
+CREATE TABLE hobbies (id INTEGER PRIMARY KEY, name TEXT, hours INTEGER);
+INSERT INTO hobbies VALUES (1, "dancing", 6);
+INSERT INTO hobbies VALUES (3, "gaming", 5);
+INSERT INTO hobbies VALUES (2, "reading", 4);
+INSERT INTO hobbies VALUES (4, "producing", 8);
+INSERT INTO hobbies VALUES (5, "dancing", 7);
+INSERT INTO hobbies VALUES (6, "styling", 2);
+INSERT INTO hobbies VALUES (7, "eating", 4);
+INSERT INTO hobbies VALUES (8, "producing", 8);
+
+CREATE TABLE songs (id INTEGER PRIMARY KEY, name TEXT, released INTEGER, genre TEXT);
+INSERT INTO songs VALUES (2, "pied piper", 2017, "kpop");
+INSERT INTO songs VALUES (8, "in your eyes", 2020, "r&b");
+INSERT INTO songs VALUES (1, "airplane.pt2", 2018, "kpop");
+INSERT INTO songs VAlUES (7, "still with you", 2020, "kpop");
+INSERT INTO songs VALUES (5, "double fantasy", 2023, "r&b");
+
+SELECT singers.name, hobbies.name AS hobbies, hobbies.hours FROM singers JOIN hobbies ON singers.id = hobbies.id;
+
+SELECT  singers.name, songs.name AS song_name, songs.released FROM singers JOIN songs ON singers.id = songs.id;
+
+SELECT singers.name, singers.hometown FROM singers;
